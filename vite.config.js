@@ -16,7 +16,7 @@ export default defineConfig({
     base: '/softline-layout/',
     build: {
         target: 'es2017',
-        outDir: 'build',
+        outDir: 'dist',
         rollupOptions: {
             input: {
                 ...pagesInput

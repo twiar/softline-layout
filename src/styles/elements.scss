@@ -1,0 +1,21 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Proxima Nova Cond';
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
