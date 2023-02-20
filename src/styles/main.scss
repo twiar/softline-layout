@@ -11,32 +11,11 @@
   align-items: center;
   justify-content: space-between;
   max-height: 85px;
+  margin-bottom: 0;
 
   &__logo {
     width: 125px;
     height: 25px;
-  }
-
-  &__nav {
-    max-height: 20px;
-    ul {
-      margin: 0;
-      display: flex;
-
-      & > li {
-        margin-right: 20px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        a {
-          font-weight: 600;
-          font-size: 18px;
-          line-height: 20px;
-        }
-      }
-    }
   }
 }
 
@@ -57,23 +36,66 @@
   &__title {
     margin: 0;
     margin-bottom: 60px;
+    text-align: left;
   }
 }
 
 .about {
   width: 100%;
   max-width: 1110px;
-  padding: 100px 70px;
-
-  &__container {
-    width: 100%;
-  }
+  padding: 0 70px;
   
   & > * {
     margin-bottom: 100px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.map {
+  & > * {
+    margin-bottom: 90px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__head {
+    background: $white;
+    box-shadow: $box_shad;
+    width: 100%;
+    max-width: 1110px;
+    padding: 28px 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dropdown {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      color: $black;
+    }
+
+    svg {
+      margin-left: 12px;
+    }
+  }
+
+  &__nav {
+    ul {
+      & > li {
+			  margin-right: 30px;
+      }
     }
   }
 }
@@ -279,6 +301,7 @@
     font-size: 12px;
     line-height: 100%;
     margin-top: 4px;
+    white-space: nowrap;
 
     &_l {
       font-size: 14px;
@@ -322,4 +345,79 @@
     &:nth-child(8) {
         transform: translate(688px, 0px);
     }
+}
+
+.mission {
+  width: 100%;
+  max-width: 1110px;
+  padding: 140px 70px;
+  background: $dark-red;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/Left_pattern.svg) no-repeat;
+    background-position-x: -4%;
+    background-position-y: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/Right_pattern.svg) no-repeat;
+    background-position-x: 104%;
+    background-position-y: center;
+  }
+
+  & > * {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    color: $white;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.business-lines {
+  & > * {
+    margin-bottom: 55px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 }
