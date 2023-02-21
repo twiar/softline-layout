@@ -3,15 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>SoftLine Layout</title>
-		<script type="module" crossorigin src="/softline-layout/assets/main.59a8b93a.js"></script>
-		<link rel="stylesheet" href="/softline-layout/assets/main.8482729b.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<script type="module" crossorigin src="/softline-layout/assets/main.b7291ce7.js"></script>
+		<link rel="stylesheet" href="/softline-layout/assets/main.40ad27d2.css">
 		<script type="module">!function(){try{new Function("m","return import(m)")}catch(o){console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}}();</script>
 	</head>
 	<body>
 		<div class='container'>
 			<div class="header">
 				<img src="/softline-layout/assets/logo.6def0a1f.svg" alt="SoftLine" class="header__logo">
-				<nav class="header__nav">
+				<nav class="header__nav header__nav_desktop">
 					<ul>
 						<li><a href="#">О нас</a></li>
 						<li><a href="#">Офисы</a></li>
@@ -36,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="about__numbers">
+				<div class="about__numbers about__numbers_desktop">
 					<div class="number__row">
 						<div class="number">
 							<div class="number__title">
@@ -68,6 +70,44 @@
 						</div>
 					</div>
 				</div>
+				<div class="about__numbers about__numbers_mobile">
+					<div class="number">
+						<div class="number__wrap">
+							<div class="number__title">
+								<span class='number__symbol'>></span><span>30 лет</span>
+							</div>
+							<div class="number__desc">на IT-рынке</div>
+						</div>
+					</div>
+					<div class="number">
+						<div class="number__wrap">
+							<div class="number__title"><span>4600</span></div>
+							<div class="number__desc">сотрудников в России</div>
+						</div>
+					</div>
+					<div class="number">
+						<div class="number__wrap">
+							<div class="number__title"><span>25</span></div>
+							<div class="number__desc">городов России</div>
+						</div>
+					</div>
+					<div class="number">
+						<div class="number__wrap">
+							<div class="number__title">
+								<span>2000</span><span class='number__symbol'>+</span>
+							</div>
+							<div class="number__desc">разработчиков</div>
+						</div>
+					</div>
+					<div class="number">
+						<div class="number__wrap">
+							<div class="number__title">
+								<span>3000</span><span class='number__symbol'>+</span>
+							</div>
+							<div class="number__desc">сотрудников ежегодно <br>проходят оценку и обучение</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="map">
 				<div class="map__head">
@@ -79,168 +119,222 @@
 					</div>
 					<nav class="map__nav">
 						<ul>
-							<li><a href="#">Все</a></li>
-							<li><a href="#">Москва</a></li>
-							<li><a href="#">Центр</a></li>
-							<li><a href="#">Северо-Запад</a></li>
-							<li><a href="#">Юг</a></li>
-							<li><a href="#">Волга</a></li>
-							<li><a href="#">Урал</a></li>
-							<li><a href="#">Сибирь</a></li>
-							<li><a href="#">Дальний Восток</a></li>
+							<li><a class='active'>Все</a></li>
+							<li><a>Москва</a></li>
+							<li><a>Центр</a></li>
+							<li><a>Северо-Запад</a></li>
+							<li><a>Юг</a></li>
+							<li><a>Волга</a></li>
+							<li><a>Урал</a></li>
+							<li><a>Сибирь</a></li>
+							<li><a>Дальний Восток</a></li>
 						</ul>
 					</nav>
 				</div>
-				<div class="country__container">
-					<div class="country">
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/1.05931bff.svg" alt="Москва">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/2.6331a8bc.svg" alt="Центр">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/3.efae966e.svg" alt="Северо-Запад">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/4.886518e7.svg" alt="Юг">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/5.e3341e81.svg" alt="Волга">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/6.274fda5b.svg" alt="Урал">   
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/7.6a1c16cf.svg" alt="Сибирь">
-						</div>
-						<div class="country__part">
-							<img class='country__image' src="/softline-layout/assets/8.dde26ab6.svg" alt="Дальний Восток">
-						</div>
+				<div class="dropdown">
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Москва</div>
 					</div>
-					<div class="city__container">
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Москва</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Центр</div>
+						<div class="dropdown__text">Воронеж</div>
+						<div class="dropdown__text">Ярославль</div>
+						<div class="dropdown__text">Белгород</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Северо-Запад</div>
+						<div class="dropdown__text">Санкт-Петербург</div>
+						<div class="dropdown__text">Калининград</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Юг</div>
+						<div class="dropdown__text">Ростов-на-Дону</div>
+						<div class="dropdown__text">Краснодар</div>
+						<div class="dropdown__text">Волгоград</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Волга</div>
+						<div class="dropdown__text">Казань</div>
+						<div class="dropdown__text">Самара</div>
+						<div class="dropdown__text">Уфа</div>
+						<div class="dropdown__text">Оренбург</div>
+						<div class="dropdown__text">Нижний Новгород</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Урал</div>
+						<div class="dropdown__text">Екатеринбург</div>
+						<div class="dropdown__text">Челябинск</div>
+						<div class="dropdown__text">Пермь</div>
+						<div class="dropdown__text">Сургут</div>
+						<div class="dropdown__text">Тюмень</div>
+						<div class="dropdown__text">Ижевск</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Сибирь</div>
+						<div class="dropdown__text">Новосибирск</div>
+						<div class="dropdown__text">Омск</div>
+						<div class="dropdown__text">Томск</div>
+						<div class="dropdown__text">Красноярск</div>
+						<div class="dropdown__text">Иркутск</div>
+					</div>
+					<div class="dropdown__col">
+						<div class="dropdown__text dropdown__text_head">Дальний Восток</div>
+						<div class="dropdown__text">Хабаровск</div>
+						<div class="dropdown__text">Владивосток</div>
+					</div>
+				</div>
+				<div class="country__wrapper">
+					<div class="country__container">
+						<div class="country">
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/1.05931bff.svg" alt="Москва">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/2.6331a8bc.svg" alt="Центр">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/3.efae966e.svg" alt="Северо-Запад">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/4.886518e7.svg" alt="Юг">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/5.e3341e81.svg" alt="Волга">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/6.274fda5b.svg" alt="Урал">   
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/7.6a1c16cf.svg" alt="Сибирь">
+							</div>
+							<div class="country__part">
+								<img class='country__image' src="/softline-layout/assets/8.dde26ab6.svg" alt="Дальний Восток">
 							</div>
 						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Ярославль</div>
+						<div class="city__container">
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Москва</div>
+								</div>
 							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Воронеж</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Ярославль</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Воронеж</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Белгород</div>
+								</div>
 							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Белгород</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_xl">Санкт-Петербург</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Калининград</div>
+								</div>
 							</div>
-						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_xl">Санкт-Петербург</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Ростов-на-Дону</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Волгоград</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Краснодар</div>
+								</div>
 							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Калининград</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Н. Новгород</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Казань</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Самара</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Уфа</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Оренбург</div>
+								</div>
 							</div>
-						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Ростов-на-Дону</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Ижевск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Пермь</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Сургут</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Екатеринбург</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Челябинск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Тюмень</div>
+								</div>
 							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Волгоград</div>
+							<div class="city__group">
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Омск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Новосибирск</div>
+								</div>
+								<div class="city city_reverse">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Томск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name">Красноярск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_l">Иркутск</div>
+								</div>
 							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Краснодар</div>
-							</div>
-						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Н. Новгород</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Казань</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Самара</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Уфа</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Оренбург</div>
-							</div>
-						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Ижевск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Пермь</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Сургут</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Екатеринбург</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Челябинск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Тюмень</div>
-							</div>
-						</div>
-						<div class="city__group">
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Омск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Новосибирск</div>
-							</div>
-							<div class="city city_reverse">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Томск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name">Красноярск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_l">Иркутск</div>
-							</div>
-						</div>
-						<div class="city__group">
-							<div class="city city_reverse">
-								<div class="city__point"></div>
-								<div class="city__name city__name_xl">Хабаровск</div>
-							</div>
-							<div class="city">
-								<div class="city__point"></div>
-								<div class="city__name city__name_xl">Владивосток</div>
+							<div class="city__group">
+								<div class="city city_reverse">
+									<div class="city__point"></div>
+									<div class="city__name city__name_xl">Хабаровск</div>
+								</div>
+								<div class="city">
+									<div class="city__point"></div>
+									<div class="city__name city__name_xl">Владивосток</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -259,7 +353,11 @@
 						</div>
 						<div class="card__title">
 							<span>Решения Softline</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.</div>
 					</div>
 					<div class="card">
 						<div class="card__img">
@@ -267,7 +365,11 @@
 						</div>
 						<div class="card__title">
 							<span>Кибербезопасность</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации. </div>
 					</div>
 					<div class="card">
 						<div class="card__img">
@@ -275,7 +377,11 @@
 						</div>
 						<div class="card__title">
 							<span>Импортозамещение</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</div>
 					</div>
 					<div class="card">
 						<div class="card__img">
@@ -283,7 +389,11 @@
 						</div>
 						<div class="card__title">
 							<span>Облачные решения</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</div>
 					</div>
 					<div class="card">
 						<div class="card__img">
@@ -291,7 +401,11 @@
 						</div>
 						<div class="card__title">
 							<span>Цифровая трансформация <br>и разработка ПО</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</div>
 					</div>
 					<div class="card">
 						<div class="card__img">
@@ -299,7 +413,11 @@
 						</div>
 						<div class="card__title">
 							<span>Техническая поддержка Softline</span>
+							<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.57129 0.785767L7.99986 7.21434L14.4284 0.785767" stroke="white" stroke-width="2"/>
+							</svg>
 						</div>
+						<div class="card__desc">200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</div>
 					</div>
 				</div>
 			</div>
@@ -455,19 +573,19 @@
 				</div>
 				<div class="gallery__slides">
 					<div class="slide">
-						<img src="/softline-layout/assets/1.f03598b8.jpg" alt="1">
-					</div>
-					<div class="slide">
 						<img src="/softline-layout/assets/2.922de8ba.jpg" alt="2">
 					</div>
 					<div class="slide">
 						<img src="/softline-layout/assets/3.ff95f5c9.jpg" alt="3">
 					</div>
 					<div class="slide">
+						<img src="/softline-layout/assets/5.7000e865.jpg" alt="5">
+					</div>
+					<div class="slide">
 						<img src="/softline-layout/assets/4.10b71e77.jpg" alt="4">
 					</div>
 					<div class="slide">
-						<img src="/softline-layout/assets/5.7000e865.jpg" alt="5">
+						<img src="/softline-layout/assets/1.f03598b8.jpg" alt="1">
 					</div>
 				</div>
 				<div class="gallery__pgntn pagination">
@@ -482,6 +600,6 @@
 		
 		<script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
 		<script nomodule id="vite-legacy-polyfill" src="/softline-layout/assets/polyfills-legacy.0deed1b1.js"></script>
-		<script nomodule id="vite-legacy-entry" data-src="/softline-layout/assets/main-legacy.aabd26d4.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+		<script nomodule id="vite-legacy-entry" data-src="/softline-layout/assets/main-legacy.7e9fc3a4.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 	</body>
 </html>
