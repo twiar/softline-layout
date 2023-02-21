@@ -18,6 +18,7 @@ a {
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 20px;
+	cursor: pointer;
 
 	&:hover {
 		color: $dark-red;
@@ -57,6 +58,7 @@ a {
 
 button {
 	width: fit-content;
+	width: -moz-fit-content;
 	background: $red;
 	color: $white;
 	padding: 18px 28px;
@@ -369,6 +371,10 @@ nav {
 }
 
 @media (max-width: 420px) {
+	* {
+		cursor: default;
+	}
+
 	body {
 		background: $white;
 	}
@@ -501,6 +507,7 @@ nav {
 
 		&_active {
 			height: fit-content;
+			height: -moz-fit-content;
 
 			.card__title {
 				position: relative;
@@ -588,5 +595,53 @@ nav {
 
 	.pagination {
 		display: none;
+	}
+
+	.dropdown {
+		padding: 20px 5px;
+		max-width: calc(100% - 10px);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 10px;
+
+		&__col {
+			&_active {
+				.dropdown__text_head {
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+
+			&_disabled {
+				.dropdown__text_head {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&__text {
+			display: none;
+			white-space: normal;
+
+			&_head {
+				display: block;
+				position: relative;
+				width: fit-content;
+				width: -moz-fit-content;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 8px;
+					height: 5px;
+					background: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4L7.4641 0.25H0.535898L4 4Z' fill='%23444444'/%3E%3C/svg%3E%0A") no-repeat right;
+					top: calc(50% - 2.5px);
+					right: -12px;
+				}
+			}
+		}
 	}
 }

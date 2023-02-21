@@ -86,6 +86,7 @@
   &__dropdown {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     span {
       font-weight: 600;
@@ -96,6 +97,12 @@
 
     svg {
       margin-left: 12px;
+    }
+
+    &_active {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -111,6 +118,10 @@
         }
       }
     }
+  }
+
+  .dropdown {
+    top: 100px;
   }
 }
 
@@ -578,6 +589,11 @@
           stroke-width: 2;
         }
       }
+    }
+
+    .dropdown {
+      top: 45px;
+      box-shadow: 0px 32px 32px rgba(0, 0, 0, 0.08);
     }
   }
 
