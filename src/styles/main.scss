@@ -624,6 +624,7 @@
 
   .about {
     padding: 0;
+    max-width: calc(100vw - 30px);
 
     &__numbers {
       &_desktop {
