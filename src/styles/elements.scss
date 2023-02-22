@@ -67,6 +67,7 @@ button {
 	font-size: 18px;
 	line-height: 20px;
 	border: none;
+	cursor: pointer;
 
 	&:hover {
 		background: $light-red;
@@ -270,6 +271,7 @@ nav {
 		font-size: 17px;
 		line-height: 140%;
 		color: $white;
+		display: none;
 	}
 
 	&:hover {
@@ -403,6 +405,23 @@ nav {
 
 		&_head {
 			font-weight: 600;
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.container {
+		width: 100vw;
+		overflow: hidden;
+	}
+
+	.number {
+		&__title {
+			font-size: 60px;
+		}
+
+		&__symbol {
+			font-size: 50px;
 		}
 	}
 }
