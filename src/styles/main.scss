@@ -17,6 +17,16 @@
     width: 125px;
     height: 25px;
   }
+
+  &_fixed {
+    position: fixed;
+    width: 100vw;
+    max-width: 1110px;
+    left: 0;
+    top: 0;
+    transition: .3s opacity, visibility ease-in-out;
+    z-index: 1000;
+  }
 }
 
 .banner {
@@ -441,6 +451,10 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
+
+    .card {
+      height: 260px;
+    }
   }
 }
 
@@ -555,10 +569,12 @@
     }
 
     &__nav {
-      width: 100vw;
+      width: calc(100vw - 30px);
       overflow-x: scroll;
       -ms-overflow-style: none;
       scrollbar-width: none;
+      margin-left: -5px;
+      padding-left: 5px;
 
       &::-webkit-scrollbar {
         display: none;
@@ -653,6 +669,10 @@
 
     &__cards {
       grid-template-columns: 1fr;
+
+      .card {
+        height: unset;
+      }
     }
   }
 
